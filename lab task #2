@@ -1,19 +1,24 @@
 //person will divide to find the person who said 100
 // order tracks if the next person is the person in front or behind
+//orderChangeDivisor is the divisor that changes the order when that number in the count is said
+//skipDivisor is the divisor that skips the next person when that number in the count is said
+//totalCount is the number that we are determining the final person will say
 
 int person = 1;
 int order = 1;
+int orderChangeDivisor = 7;
+int skipDivisior = 11;
+int totalCount = 100;
 
-
-for int i = 1; i != 100; i++
+for int i = 1; i != totalCount; i++
 //check for divisible by 7 and reverse order
-  if(i % 7 == 0 )
+  if(i % orderChangeDivisor == 0 )
     order = order * -1;
 //check for divisible by 11 and then apply changes to the person
-  if(i % 11 == 0)
+  if(i % skipDivisor == 0)
    person = person + (order*2);
   else 
     person = person + order;
 
-return person%10
+return person%10;
 //assuming the language drops the remainder instead of rounding it to the nearest whole
