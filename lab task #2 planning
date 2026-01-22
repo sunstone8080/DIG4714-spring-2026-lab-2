@@ -1,0 +1,8 @@
+lab task 
+start
+  initialize count of people, stopping count, and any divisors
+begin counting
+  if divisible by divisor 1, change order
+  if divisible by divisor 2 skip next person
+end on final count
+return person who said the last number
