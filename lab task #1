@@ -5,7 +5,7 @@
   int turn
 
 
-- method to create board (parameter rowCols, returns board)
+- method to create board (parameter rowCols, returns board) {
   declare 2D char list board, rowCol cols
   for i<rowCols; i++ {
     board[i] = declare row list
@@ -14,15 +14,21 @@
     }
   }
   return board
+}
 
 
-- method to check winner (parameter board, returns 0 or 1)
+- method to check winner (parameter board, returns 0 or 1) {
   check horizontal spaces for value x/o (rowCol times)
+    if 3 in a row return 1
 
   check vertical spaces for value x/o (rowCol times)
+    if 3 in a row return 1
 
   check diagonal spaces for value x/o (2 times)
+    if 3 in a row return 1
 
+  return 0;
+}
 
 
 - main() {
