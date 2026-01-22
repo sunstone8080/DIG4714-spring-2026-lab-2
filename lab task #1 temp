@@ -1,0 +1,43 @@
+//setup
+player = 1;
+get input size;
+array board[size][size];
+
+public void printGrid
+  for int i = 0; i < size: i++
+    for int j = 0; j < size: i++
+      print board[i, j];
+
+public int checkWin
+int winCounter = 0
+  for i=0:size-1
+    for j=0:size-1
+//check horizontal
+      winCounter= winCounter+ board[i:j]
+    if winCounter == size || winCounter == size *-1
+      return winCounter / size;
+//check vertical
+    for j:size
+      winCounter= winCounter+ board[j:i]
+    if winCounter == size || winCounter == size *-1
+      return winCounter / size;
+//check diagonal 1
+  winCounter= winCounter+ board[i:i]
+    if winCounter == size || winCounter == size *-1
+      return winCounter / size;
+//check diagonal 2
+  winCounter= winCounter+ board[size-i-1:size-i-1]
+    if winCounter == size || winCounter == size *-1
+      return winCounter / size;
+//no win
+  return 0;
+
+void main();
+for int i = 0; i < size*size: i++
+  get input x,y;
+  board[x,y] = player;
+  player = player*-1;
+  printGrid();
+  if(checkWin() != 0)
+  print("the winner is player %d", checkwin());
+  
