@@ -1,0 +1,8 @@
+1. start game at turn 1 and player 1
+2. ask how many rows and columns game will be played with
+3. take row and column input for player turn
+4. check if there is a winner
+  a. check rows, columns, diagonals
+  b. no winner? keep playing, next player
+  c. winner? end game with winner announcement
+5. if the board runs out of space end game with a tie announcement
