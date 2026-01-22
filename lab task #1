@@ -1,1 +1,56 @@
+- variables:
+  int rowCols
+  int playerTurn
+  int outcome
+  int turn
 
+
+- method to create board (parameter rowCols, returns board)
+  declare 2D char list board, rowCol cols
+  for i<rowCols; i++ {
+    board[i] = declare row list
+    for j<rowCols; j++ {
+      board[i][j] = " "
+    }
+  }
+  return board
+
+
+- method to check winner (parameter board, returns 0 or 1)
+  check horizontal spaces for value x/o (rowCol times)
+
+  check vertical spaces for value x/o (rowCol times)
+
+  check diagonal spaces for value x/o (2 times)
+
+
+
+- main() {
+  take input for int rowCols
+  char** board = createBoard(rowCols)
+
+  int playerTurn = 1;
+  int turn = 1;
+
+  while outcome != 1 {
+    if turn > 9
+      if (call winnerCheck method) = 0 print "tied game" and return 0 to end main
+
+    print "player [playerTurn]'s turn"
+    take input for row
+    take input for col
+
+    check if that spot is taken
+      if it's taken print "taken; try again" and do nothing else so loop restarts
+    else check the playerturn
+      playerTurn 1: place "x" in the corresponding spot
+      playerTurn 2: place "o" in the corresponding spot
+
+    call winnerCheck method, if it returns 1 the while loop will end
+
+    player = player%2 + 1
+    turn++
+  }
+
+  print "winner player [playerTurn]"
+}
